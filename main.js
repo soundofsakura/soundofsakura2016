@@ -60,7 +60,7 @@ $(window).resize(function() {
 });
 
 
-function scrollHeaderChange () 
+function scrollHeaderChange ()
 {
   if ($(window).width()>639) {
     if ($(window).scrollTop()>$(window).height()-70){
@@ -74,18 +74,18 @@ function scrollHeaderChange ()
       navigation.close();
     }
     //收起导航栏
-  }  
+  }
   if ($(window).scrollTop()>($(window).height()+150)){
     if($('#top').hasClass('tophide')){
       $('#top').removeClass('tophide').addClass('topshow');
-    } 
+    }
   }else{
     if($('#top').hasClass('topshow')){
       $('#top').removeClass('topshow').addClass('tophide');
     }
   }
 }
-function resizeAdjust () 
+function resizeAdjust ()
 {
   headroom.offset = $(window).height();
   $('#headimg').css('height', $(window).height());
@@ -101,7 +101,7 @@ function moveScroll(id)
 {
   $("html,body").stop(true);
   $("html,body").animate({scrollTop: $(id).offset().top}, 400);
-}; 
+};
 
 var musicPool = [
   {
@@ -133,7 +133,6 @@ $('#musiccontrol').click(function(e) {
 });
 musicBlock.addEventListener("ended",function(event) {
   nextMusic();
-  musicPlay();
 });
 function nextMusic () {
   if(arguments[0] || false){musicIndex = musicPool.length-1}
@@ -147,15 +146,19 @@ function nextMusic () {
   musicPlay();
 }
 function musicPlay () {
+  try{
     musicBlock.play();
-    musicToggle = 1;
+  }catch(e){
+    nextMusic();
+  }
+  musicToggle = 1;
 }
 function musicPause () {
   musicBlock.pause();
   musicToggle = 0;
 }
 
-function initialize () 
+function initialize ()
 {
   $('#headimg').css('height', $(window).height());//首页大小
   scrollHeaderChange();
