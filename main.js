@@ -105,12 +105,12 @@ function moveScroll(id)
 
 var musicPool = [
   {
-    name: '风向仪',
-    src: 'http://data2.5sing.kgimg.com/T1CxYLBCdT1R47IVrK.mp3',
+    name: 'ネリの星空',
+    src: 'http://data.5sing.kgimg.com/G075/M05/0D/13/64YBAFe92raAG7_RAGdizUa58yE685.mp3',
   },
   {
-    name: '午后柠檬树下的阳光',
-    src: 'http://data10.5sing.kgimg.com/T1S6hnBydT1R47IVrK.mp3',
+    name: '风向仪',
+    src: 'http://data2.5sing.kgimg.com/T1CxYLBCdT1R47IVrK.mp3',
   },
 ];
 var musicIndex = 0;
