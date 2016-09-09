@@ -482,7 +482,7 @@ header{
 }
 #signup{
   right: 20%;
-  bottom: 15%;
+  bottom: 14%;
 }
 }
 @media all and (max-width: 768px){
@@ -566,6 +566,13 @@ header{
     padding-top: 6px;
     padding-bottom: 6px;
     font-size: 1.2em;
+  }
+  #musiccontrol{
+    bottom: 25%;
+  }
+  #signup{
+    right: 20%;
+    bottom: 12%;
   }
 }
 @media all and (max-width: 485px){
